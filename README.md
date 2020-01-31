@@ -71,6 +71,15 @@ registered 501(c)3 non-profit organisation based in California, USA. We are a gl
 teaching foundational computational and data science skills to researchers in academia, industry and
 government. More information can be found [here][cp-about].
 
+## About BioData Club
+
+BioData Club is an interdisciplinary community at OHSU dedicated to promoting a fun and supportive culture of co-learning in data science skills and 
+open science principles. We host workshops and social events where attendees can learn and work on projects among friends and colleagues. Biodata 
+Club welcomes everyone who wants to better their know-how in all things data, regardless of skill level. We want to replace statistics anxiety and 
+code fear with inspiration and motivation to learn and share. BioData Club is supported by the [OHSU Library][ohsu-library] and [DMICE][dmice].
+
+[ohsu-ilbrary]: https://www.ohsu.edu/library
+[dmice]: https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology
 [lesson-example]: https://carpentries.github.io/lesson-example
 [anne_fouilloux]: https://github.com/annefou
 [lauren_ko]: https://github.com/ldko
@@ -103,3 +112,4 @@ government. More information can be found [here][cp-about].
 [mit-license]: https://opensource.org/licenses/mit-license.html
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
+
