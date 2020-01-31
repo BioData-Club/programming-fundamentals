@@ -1,9 +1,5 @@
 # Programming with Python
 
-[![GitHub release][shields_release]][swc_py_releases]
-[![Create a Slack Account with us][create_slack_svg]][slack_heroku_invite]
-[![Slack Status][slack_channel_status]][slack_channel_url]
-
 An introduction to Python for non-programmers using inflammation data.
 
 ## About the Lesson
@@ -20,9 +16,8 @@ how it is better to automate analysis using functions instead of repeating analy
 steps manually.
 
 The rendered version of the lesson is available at:
-<https://swcarpentry.github.io/python-novice-inflammation/>.
+<https://biodata-club.github.io/python-novice-inflammation/>.
 
-This lesson is also available in [R][R] and [MATLAB][MATLAB].
 
 ## Episodes
 
@@ -44,14 +39,6 @@ This lesson is also available in [R][R] and [MATLAB][MATLAB].
 
 ## Contributing
 [![Travis Build Status][travis_svg]][travis_url]
-
-We welcome all contributions to improve the lesson!
-Maintainers will do their best to help you if you have any questions, concerns,
-or experience any difficulties along the way.
-
-We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md)
-and have a look at the [more detailed guidelines][lesson-example] on proper formatting,
-ways to render the lesson locally, and even how to write new episodes!
 
 ## Maintainers
 
@@ -95,28 +82,21 @@ government. More information can be found [here][cp-about].
 [swc_history]: https://software-carpentry.org/scf/history/
 [best-practices]: http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745
 [good-practices]: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
-[R]: https://github.com/swcarpentry/r-novice-inflammation
-[MATLAB]: https://github.com/swcarpentry/matlab-novice-inflammation
-[shields_release]: https://img.shields.io/github/release/swcarpentry/python-novice-inflammation.svg
-[swc_py_releases]: https://github.com/swcarpentry/python-novice-inflammation/releases
-[create_slack_svg]: https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg
-[slack_heroku_invite]: https://swc-slack-invite.herokuapp.com
-[slack_channel_status]: https://img.shields.io/badge/Slack_Channel-swc--py--inflammation-E01563.svg
-[slack_channel_url]: https://swcarpentry.slack.com/messages/C9Y0L6MF0
-[travis_svg]: https://travis-ci.org/swcarpentry/python-novice-inflammation.svg?branch=gh-pages
-[travis_url]: https://travis-ci.org/swcarpentry/python-novice-inflammation
-[episode01]: https://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html
-[episode02]: https://swcarpentry.github.io/python-novice-inflammation/02-numpy/index.html
-[episode03]: https://swcarpentry.github.io/python-novice-inflammation/03-matplotlib/index.html
-[episode04]: https://swcarpentry.github.io/python-novice-inflammation/04-loop/index.html
-[episode05]: https://swcarpentry.github.io/python-novice-inflammation/05-lists/index.html
-[episode06]: https://swcarpentry.github.io/python-novice-inflammation/06-files/index.html
-[episode07]: https://swcarpentry.github.io/python-novice-inflammation/07-cond/index.html
-[episode08]: https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html
-[episode09]: https://swcarpentry.github.io/python-novice-inflammation/09-errors/index.html
-[episode10]: https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html
-[episode11]: https://swcarpentry.github.io/python-novice-inflammation/11-debugging/index.html
-[episode12]: https://swcarpentry.github.io/python-novice-inflammation/12-cmdline/index.html
+[shields_release]: https://img.shields.io/github/release/biodata-club/python-novice-inflammation.svg
+[travis_svg]: https://travis-ci.org/biodata-club/python-novice-inflammation.svg?branch=gh-pages
+[travis_url]: https://travis-ci.org/biodata-club/python-novice-inflammation
+[episode01]: https://biodata-club.github.io/python-novice-inflammation/01-intro/index.html
+[episode02]: https://biodata-club.github.io/python-novice-inflammation/02-numpy/index.html
+[episode03]: https://biodata-club.github.io/python-novice-inflammation/03-matplotlib/index.html
+[episode04]: https://biodata-club.github.io/python-novice-inflammation/04-loop/index.html
+[episode05]: https://biodata-club.github.io/python-novice-inflammation/05-lists/index.html
+[episode06]: https://biodata-club.github.io/python-novice-inflammation/06-files/index.html
+[episode07]: https://biodata-club.github.io/python-novice-inflammation/07-cond/index.html
+[episode08]: https://biodata-club.github.io/python-novice-inflammation/08-func/index.html
+[episode09]: https://biodata-club.github.io/python-novice-inflammation/09-errors/index.html
+[episode10]: https://biodata-club.github.io/python-novice-inflammation/10-defensive/index.html
+[episode11]: https://biodata-club.github.io/python-novice-inflammation/11-debugging/index.html
+[episode12]: https://biodata-club.github.io/python-novice-inflammation/12-cmdline/index.html
 [community-initiatives]: https://communityin.org
 [cp-about]: https://carpentries.org/about
 [swc-about]: https://software-carpentry.org/about/
