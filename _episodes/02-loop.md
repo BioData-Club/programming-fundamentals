@@ -15,14 +15,10 @@ keypoints:
 - "Use `len(thing)` to determine the length of something that contains other values."
 ---
 
-In the last episode, we wrote Python code that plots values of interest from our first
-inflammation dataset (`inflammation-01.csv`), which revealed some suspicious features in it.
+Next we'll be teaching the computer how to repeat things.
 
-![Analysis of inflammation-01.csv](../fig/03-loop_2_0.png)
-
-We have a dozen data sets right now, though, and more on the way.
-We want to create plots for all of our data sets with a single statement.
-To do that, we'll have to teach the computer how to repeat things.
+Imagine you have a task you want to do repeatedly, and it is the same
+task over and over again, just on a different "input."
 
 An example task that we might want to repeat is printing each character in a
 word on a line of its own.
