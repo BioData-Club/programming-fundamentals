@@ -24,12 +24,12 @@ The rendered version of the lesson is available at:
 | # |  Episode | Time | Question(s) |
 |--:|:---------|:----:|:------------|
 | 1 | [Python Fundamentals][episode01] | 30 | What basic data types can I work with in Python?<br>How can I create a new variable in Python?<br>Can I change the value associated with a variable after I create it? |
-| 2 | [Analyzing Patient Data][episode02] | 60 | How can I process tabular data files in Python? |
-| 3 | [Visualizing Tabular Data][episode03] | 50 | How can I visualize tabular data in Python?<br>How can I group several plots together? |
-| 4 | [Repeating Actions with Loops][episode04] | 30 | How can I do the same operations on many different values? |
-| 5 | [Storing Multiple Values in Lists][episode05] | 30 | How can I store many values together? |
-| 6 | [Analyzing Data from Multiple Files][episode06] | 20 | How can I do the same operations on many different files? |
-| 7 | [Making Choices][episode07] | 30 | How can my programs do different things based on data values? |
+| 2 | [Repeating Actions with Loops][episode02] | 30 | How can I do the same operations on many different values? |
+| 3 | [Storing Multiple Values in Lists][episode03] | 30 | How can I store many values together? |
+| 4 | [Making Choices][episode04] | 30 | How can my programs do different things based on data values? |
+| 5 | [Analyzing Patient Data][episode05] | 60 | How can I process tabular data files in Python? |
+| 6 | [Visualizing Tabular Data][episode06] | 50 | How can I visualize tabular data in Python?<br>How can I group several plots together? |
+| 7 | [Analyzing Data from Multiple Files][episode07] | 20 | How can I do the same operations on many different files? |
 | 8 | [Creating Functions][episode08] | 30 | How can I define new functions?<br>What’s the difference between defining and calling a function?<br>What happens when I call a function? |
 | 9 | [Errors and Exceptions][episode09] | 30 | How does Python report errors?<br>How can I handle errors in Python programs? |
 |10 | [Defensive Programming][episode10] | 30 | How can I make my programs more reliable? |
@@ -78,7 +78,7 @@ open science principles. We host workshops and social events where attendees can
 Club welcomes everyone who wants to better their know-how in all things data, regardless of skill level. We want to replace statistics anxiety and 
 code fear with inspiration and motivation to learn and share. BioData Club is supported by the [OHSU Library][ohsu-library] and [DMICE][dmice].
 
-[ohsu-ilbrary]: https://www.ohsu.edu/library
+[ohsu-library]: https://www.ohsu.edu/library
 [dmice]: https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology
 [lesson-example]: https://carpentries.github.io/lesson-example
 [anne_fouilloux]: https://github.com/annefou
@@ -95,12 +95,12 @@ code fear with inspiration and motivation to learn and share. BioData Club is su
 [travis_svg]: https://travis-ci.org/biodata-club/python-novice-inflammation.svg?branch=gh-pages
 [travis_url]: https://travis-ci.org/biodata-club/python-novice-inflammation
 [episode01]: https://biodata-club.github.io/python-novice-inflammation/01-intro/index.html
-[episode02]: https://biodata-club.github.io/python-novice-inflammation/02-numpy/index.html
-[episode03]: https://biodata-club.github.io/python-novice-inflammation/03-matplotlib/index.html
-[episode04]: https://biodata-club.github.io/python-novice-inflammation/04-loop/index.html
-[episode05]: https://biodata-club.github.io/python-novice-inflammation/05-lists/index.html
-[episode06]: https://biodata-club.github.io/python-novice-inflammation/06-files/index.html
-[episode07]: https://biodata-club.github.io/python-novice-inflammation/07-cond/index.html
+[episode02]: https://biodata-club.github.io/python-novice-inflammation/02-loop/index.html
+[episode03]: https://biodata-club.github.io/python-novice-inflammation/03-lists/index.html
+[episode04]: https://biodata-club.github.io/python-novice-inflammation/04-cond/index.html
+[episode05]: https://biodata-club.github.io/python-novice-inflammation/05-numpy/index.html
+[episode06]: https://biodata-club.github.io/python-novice-inflammation/06-matplotlib/index.html
+[episode07]: https://biodata-club.github.io/python-novice-inflammation/07-files/index.html
 [episode08]: https://biodata-club.github.io/python-novice-inflammation/08-func/index.html
 [episode09]: https://biodata-club.github.io/python-novice-inflammation/09-errors/index.html
 [episode10]: https://biodata-club.github.io/python-novice-inflammation/10-defensive/index.html
