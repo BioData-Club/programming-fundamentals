@@ -49,7 +49,7 @@ need for each program.
 Once we've imported the library, we can ask the library to read our data file for us:
 
 ~~~
-numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
+numpy.loadtxt(fname='bdc-python/data/inflammation-01.csv', delimiter=',')
 ~~~
 {: .language-python}
 
@@ -108,7 +108,7 @@ value to a variable, we can also assign an array of values to a variable using t
 Let's re-run `numpy.loadtxt` and save the returned data:
 
 ~~~
-data = numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
+data = numpy.loadtxt(fname='bdc-python/data/inflammation-01.csv', delimiter=',')
 ~~~
 {: .language-python}
 
