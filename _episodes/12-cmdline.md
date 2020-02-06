@@ -31,11 +31,18 @@ and prints the average inflammation per patient.
 > command that tells you to run that command in the shell rather than the Python interpreter.
 {: .callout}
 
+> ## Opening a shell in repl.it
+> 
+> 1. In your repl.it window, press F1. This opens the Command Palette.
+> 2. In the Command Palette, type `shell` and press Enter. This will open a shell interface in the bottom third of the rightmost pane of your repl.it window.
+> 3. type `cd bdc-python/data` to change to your project's data directory. (You will need to be in this directory to do the exercises in this episode.)
+{: .callout}
+
 This program does exactly what we want - it prints the average inflammation per patient
 for a given file.
 
 ~~~
-$ python ../code/readings_04.py --mean inflammation-01.csv
+$ python bdc-data/code/readings_04.py --mean inflammation-01.csv
 ~~~
 {: .language-bash}
 
