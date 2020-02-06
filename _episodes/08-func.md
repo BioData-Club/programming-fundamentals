@@ -200,7 +200,7 @@ we can now read and reuse both ideas separately.
 We can reproduce the previous analysis with a much simpler `for` loop:
 
 ~~~
-filenames = sorted(glob.glob('inflammation*.csv'))
+filenames = sorted(('bdc-python/data/inflammation*.csv'))
 
 for filename in filenames[:3]:
     print(filename)
@@ -251,7 +251,7 @@ That looks right,
 so let's try `offset_mean` on our real data:
 
 ~~~
-data = numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
+data = numpy.loadtxt(fname='bdc-python/data/inflammation-01.csv', delimiter=',')
 print(offset_mean(data, 0))
 ~~~
 {: .language-python}
@@ -404,12 +404,12 @@ offset_mean(data, target_mean_value)
 
 We have passed parameters to functions in two ways:
 directly, as in `type(data)`,
-and by name, as in `numpy.loadtxt(fname='something.csv', delimiter=',')`.
+and by name, as in `numpy.loadtxt(fname='filepath/something.csv', delimiter=',')`.
 In fact,
 we can pass the filename to `loadtxt` without the `fname=`:
 
 ~~~
-numpy.loadtxt('inflammation-01.csv', delimiter=',')
+numpy.loadtxt('bdc-python/data/inflammation-01.csv', delimiter=',')
 ~~~
 {: .language-python}
 
@@ -427,7 +427,7 @@ array([[ 0.,  0.,  1., ...,  3.,  0.,  0.],
 but we still need to say `delimiter=`:
 
 ~~~
-numpy.loadtxt('inflammation-01.csv', ',')
+numpy.loadtxt('bdc-python/data/inflammation-01.csv', ',')
 ~~~
 {: .language-python}
 
@@ -589,7 +589,7 @@ and eight others that do.
 If we call the function like this:
 
 ~~~
-numpy.loadtxt('inflammation-01.csv', ',')
+numpy.loadtxt('bdc-data/data/inflammation-01.csv', ',')
 ~~~
 {: .language-python}
 
