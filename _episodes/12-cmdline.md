@@ -42,7 +42,7 @@ This program does exactly what we want - it prints the average inflammation per 
 for a given file.
 
 ~~~
-$ python bdc-data/code/readings_04.py --mean inflammation-01.csv
+$ python ../code/readings_04.py --mean inflammation-01.csv
 ~~~
 {: .language-bash}
 
