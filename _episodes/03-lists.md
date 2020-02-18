@@ -21,9 +21,7 @@ list[2:9]), in the same way as strings and arrays."
 ---
 
 Similar to a string that can contain many characters, a list is a container that can store many values.
-Unlike NumPy arrays,
-lists are built into the language (so we don't have to load a library
-to use them).
+Lists are built into the language.
 We create a list by putting values inside square brackets and separating the values with commas:
 
 ~~~
@@ -331,8 +329,7 @@ odds: [1, 3, 5, 7]
 > {: .solution}
 {: .challenge}
 
-Subsets of lists and strings can be accessed by specifying ranges of values in brackets,
-similar to how we accessed ranges of positions in a NumPy array.
+Subsets of lists and strings can be accessed by specifying ranges of values in brackets.
 This is commonly referred to as "slicing" the list/string.
 
 ~~~
