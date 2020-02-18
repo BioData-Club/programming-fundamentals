@@ -141,13 +141,6 @@ for variable in collection:
 ~~~
 {: .language-python}
 
-Using the oxygen example above, the loop might look like this:
-
-![loop_image](../fig/loops_image.png)
-
-where each character (`char`) in the variable `word` is looped through and printed one character
-after another. The numbers in the diagram denote which loop cycle the character was printed in (1
-being the first loop, and 6 being the final loop).
 
 We can call the [loop variable]({{ page.root }}/reference/#loop-variable) anything we like, but
 there must be a colon at the end of the line starting the loop, and we must indent anything we
@@ -315,98 +308,5 @@ so we should always use it when we can.
 > {: .solution}
 {: .challenge}
 
-
-
-> ## Computing Powers With Loops
->
-> Exponentiation is built into Python:
->
-> ~~~
-> print(5 ** 3)
-> ~~~
-> {: .language-python}
->
-> ~~~
-> 125
-> ~~~
-> {: .output}
->
-> Write a loop that calculates the same result as `5 ** 3` using
-> multiplication (and without exponentiation).
->
-> > ## Solution
-> > ~~~
-> > result = 1
-> > for number in range(0, 3):
-> >     result = result * 5
-> > print(result)
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
-
-> ## Reverse a String
->
-> Knowing that two strings can be concatenated using the `+` operator,
-> write a loop that takes a string
-> and produces a new string with the characters in reverse order,
-> so `'Newton'` becomes `'notweN'`.
->
-> > ## Solution
-> > ~~~
-> > newstring = ''
-> > oldstring = 'Newton'
-> > for char in oldstring:
-> >     newstring = char + newstring
-> > print(newstring)
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
-
-> ## Computing the Value of a Polynomial
->
-> The built-in function `enumerate` takes a sequence (e.g. a list) and generates a
-> new sequence of the same length. Each element of the new sequence is a pair composed of the index
-> (0, 1, 2,...) and the value from the original sequence:
->
-> ~~~
-> for idx, val in enumerate(a_list):
->     # Do something using idx and val
-> ~~~
-> {: .language-python}
->
-> The code above loops through `a_list`, assigning the index to `idx` and the value to `val`.
->
-> Suppose you have encoded a polynomial as a list of coefficients in
-> the following way: the first element is the constant term, the
-> second element is the coefficient of the linear term, the third is the
-> coefficient of the quadratic term, etc.
->
-> ~~~
-> x = 5
-> coefs = [2, 4, 3]
-> y = coefs[0] * x**0 + coefs[1] * x**1 + coefs[2] * x**2
-> print(y)
-> ~~~
-> {: .language-python}
->
-> ~~~
-> 97
-> ~~~
-> {: .output}
->
-> Write a loop using `enumerate(coefs)` which computes the value `y` of any
-> polynomial, given `x` and `coefs`.
->
-> > ## Solution
-> > ~~~
-> > y = 0
-> > for idx, coef in enumerate(coefs):
-> >     y = y + coef * x**idx
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
 
 {% include links.md %}
