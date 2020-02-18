@@ -38,16 +38,6 @@ We recommend [Visual Studio Code][vscode-website] for a full-featured IDE.
 After a short loading you should see three side-by-side panes
 surrounded by a top menu bar and a left menu bar.
 
-## Obtain lesson materials and upload them to repl.it (Optional)
-
-In this workshop we're only covering the first four episodes of the lesson. You are free to continue working on the remaining episodes on your own after the workshop is over.  The remaining lessons require downloading some data files and uploading them to repl.it.
-
-1. Download [python-novice-inflammation-data.zip][zipfile1] and [python-novice-inflammation-code.zip][zipfile2].
-2. Create a folder called `bdc-python` on your Desktop.
-3. Move the downloaded files to `bdc-python`.
-4. Unzip the files.
-5. Drag and drop `bdc-python` into the leftmost `Files` pane in your repl.it window to upload the files to repl.it.
-
 ## Know your interface
 
 The following sentences detail the user interface of repl.it.
@@ -64,5 +54,3 @@ or to customize Settings of this online IDE.
 [gitbash]: https://gitforwindows.org
 [replit-website]: https://repl.it/
 [vscode-website]: https://code.visualstudio.com/
-[zipfile1]: {{ page.root }}/data/python-novice-inflammation-data.zip
-[zipfile2]: {{ page.root }}/code/python-novice-inflammation-code.zip
