@@ -24,14 +24,14 @@ An example task that we might want to repeat is printing each character in a
 word on a line of its own.
 
 ~~~
-word = 'lead'
+word = 'eggs'
 ~~~
 {: .language-python}
 
 In Python, a string is basically an ordered collection of characters, and every
 character has a unique number associated with it -- its index. This means that
 we can access characters in a string using their indices.
-For example, we can get the first character of the word `'lead'`, by using
+For example, we can get the first character of the word `'eggs'`, by using
 `word[0]`. One way to print each character is to use four `print` statements:
 
 ~~~
@@ -43,10 +43,10 @@ print(word[3])
 {: .language-python}
 
 ~~~
-l
 e
-a
-d
+g
+g
+s
 ~~~
 {: .output}
 
@@ -66,7 +66,7 @@ This is a bad approach for three reasons:
     string that don't exist.
 
 ~~~
-word = 'tin'
+word = 'egg'
 print(word[0])
 print(word[1])
 print(word[2])
@@ -75,9 +75,9 @@ print(word[3])
 {: .language-python}
 
 ~~~
-t
-i
-n
+e
+g
+g
 ~~~
 {: .output}
 
@@ -96,7 +96,7 @@ IndexError: string index out of range
 Here's a better approach:
 
 ~~~
-word = 'lead'
+word = 'eggs'
 for char in word:
     print(char)
 
@@ -104,10 +104,10 @@ for char in word:
 {: .language-python}
 
 ~~~
-l
 e
-a
-d
+g
+g
+s
 ~~~
 {: .output}
 
@@ -115,19 +115,19 @@ This is shorter --- certainly shorter than something that prints every character
 hundred-letter string --- and more robust as well:
 
 ~~~
-word = 'oxygen'
+word = 'butter'
 for char in word:
     print(char)
 ~~~
 {: .language-python}
 
 ~~~
-o
-x
-y
-g
+b
+u
+t
+t
 e
-n
+r
 ~~~
 {: .output}
 
@@ -156,19 +156,19 @@ of the loop body (e.g. `end for`); what is indented after the `for` statement be
 > We can even call our loop variable `banana`, as long as we use this name consistently:
 >
 > ~~~
-> word = 'oxygen'
+> word = 'butter'
 > for banana in word:
 >     print(banana)
 > ~~~
 > {: .language-python}
 >
 > ~~~
-> o
-> x
-> y
-> g
+> b
+> u
+> t
+> t
 > e
-> n
+> r
 > ~~~
 > {: .output}
 >
@@ -211,21 +211,15 @@ and the `print` statement on line 4 tells us our final answer.
 
 Note that a loop variable is a variable that's being used to record progress in a loop.
 It still exists after the loop is over,
-and we can re-use variables previously defined as loop variables as well:
+and we can re-use variables previously defined as loop variables as well.
 
 ~~~
-letter = 'z'
-for letter in 'abc':
-    print(letter)
-print('after the loop, letter is', letter)
+print('after the loop, vowel is', vowel)
 ~~~
 {: .language-python}
 
 ~~~
-a
-b
-c
-after the loop, letter is c
+after the loop, vowel is u
 ~~~
 {: .output}
 
@@ -288,7 +282,7 @@ so we should always use it when we can.
 >
 > Given the following loop:
 > ~~~
-> word = 'oxygen'
+> word = 'butter'
 > for char in word:
 >     print(char)
 > ~~~
