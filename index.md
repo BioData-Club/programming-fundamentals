@@ -5,7 +5,8 @@ permalink: index.html
 ---
 
 
-## Welcome to the workshop!
+Welcome to the BioData Club Programming Fundamentals workshop!
+
 
 ### Why should you learn to program?
 
