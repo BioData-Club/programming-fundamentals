@@ -3,7 +3,9 @@ layout: lesson
 root: .
 permalink: index.html
 ---
-## Welcome
+
+
+## Welcome to the workshop!
 
 ### Why should you learn to program?
 
