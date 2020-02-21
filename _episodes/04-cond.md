@@ -1,7 +1,7 @@
 ---
 title: Making Choices
-teaching: 30
-exercises: 0
+teaching: 20
+exercises: 10
 questions:
 - "How can my programs do different things based on data values?"
 objectives:
@@ -14,16 +14,13 @@ keypoints:
 - "Use `==` to test for equality."
 - "`X and Y` is only true if both `X` and `Y` are true."
 - "`X or Y` is true if either `X` or `Y`, or both, are true."
-- "Zero, the empty string, and the empty list are considered false;
-   all other numbers, strings, and lists are considered true."
 - "`True` and `False` represent truth values."
 ---
 
-In our last lesson, we discovered something suspicious was going on
-in our inflammation data by drawing some plots.
-How can we use Python to automatically recognize the different features we saw,
-and take a different action for each? In this lesson, we'll learn how to write code that
+In this lesson, we'll learn how to write code that
 runs only when certain conditions are true.
+Another way to think of conditionals is,
+"if this happens, then do that."
 
 ## Conditionals
 
@@ -98,6 +95,20 @@ else:
 Note that to test for equality we use a double equals sign `==`
 rather than a single equals sign `=` which is used to assign values.
 
+Another valuable test is `in`. The following Python code uses `in`
+to test for the presence of a letter in a word.
+
+~~~
+if 'g' in 'eggs':
+    print('there is a letter g in the word eggs')
+~~~
+{: .language-python}
+
+~~~
+there is a letter g in the word eggs
+~~~
+{: .output}
+
 We can also combine tests using `and` and `or`.
 `and` is only true if both parts are true:
 
@@ -118,12 +129,12 @@ while `or` is true if at least one part is true:
 
 ~~~
 if (1 < 0) or (-1 < 0):
-    print('at least one test is true')
+    print('at least one part is true')
 ~~~
 {: .language-python}
 
 ~~~
-at least one test is true
+at least one part is true
 ~~~
 {: .output}
 
@@ -161,201 +172,38 @@ at least one test is true
 > {: .solution}
 {: .challenge}
 
-> ## What Is Truth?
->
-> `True` and `False` booleans are not the only values in Python that are true and false.
-> In fact, *any* value can be used in an `if` or `elif`.
-> After reading and running the code below,
-> explain what the rule is for which values are considered true and which are considered false.
->
-> ~~~
-> if '':
->     print('empty string is true')
-> if 'word':
->     print('word is true')
-> if []:
->     print('empty list is true')
-> if [1, 2, 3]:
->     print('non-empty list is true')
-> if 0:
->     print('zero is true')
-> if 1:
->     print('one is true')
-> ~~~
-> {: .language-python}
-{: .challenge}
-
 > ## That's Not Not What I Meant
 >
 > Sometimes it is useful to check whether some condition is not true.
 > The Boolean operator `not` can do this explicitly.
 > After reading and running the code below,
-> write some `if` statements that use `not` to test the rule
-> that you formulated in the previous challenge.
+> write some `if` statements that use `not` to test their rules.
 >
 > ~~~
-> if not '':
->     print('empty string is not true')
-> if not 'word':
->     print('word is not true')
-> if not not True:
->     print('not not True is true')
+> if not 'i' in 'team':
+>     print('there is no i in team')
 > ~~~
 > {: .language-python}
 {: .challenge}
 
-> ## Close Enough
->
-> Write some conditions that print `True` if the variable `a` is within 10% of the variable `b`
-> and `False` otherwise.
-> Compare your implementation with your partner's:
-> do you get the same answer for all possible pairs of numbers?
->
-> > ## Solution 1
-> > ~~~
-> > a = 5
-> > b = 5.1
-> >
-> > if abs(a - b) < 0.1 * abs(b):
-> >     print('True')
-> > else:
-> >     print('False')
-> > ~~~
-> > {: .language-python}
-> {: .solution}
->
-> > ## Solution 2
-> > ~~~
-> > print(abs(a - b) < 0.1 * abs(b))
-> > ~~~
-> > {: .language-python}
-> >
-> > This works because the Booleans `True` and `False`
-> > have string representations which can be printed.
-> {: .solution}
-{: .challenge}
+## In-Place Operators
 
-> ## In-Place Operators
->
-> Python (and most other languages in the C family) provides
-> [in-place operators]({{ page.root }}/reference/#in-place-operators)
-> that work like this:
->
-> ~~~
-> x = 1  # original value
-> x += 1 # add one to x, assigning result back to x
-> x *= 3 # multiply x by 3
-> print(x)
-> ~~~
-> {: .language-python}
->
-> ~~~
-> 6
-> ~~~
-> {: .output}
->
-> Write some code that sums the positive and negative numbers in a list separately,
-> using in-place operators.
-> Do you think the result is more or less readable
-> than writing the same without in-place operators?
->
-> > ## Solution
-> > ~~~
-> > positive_sum = 0
-> > negative_sum = 0
-> > test_list = [3, 4, 6, 1, -1, -5, 0, 7, -8]
-> > for num in test_list:
-> >     if num > 0:
-> >         positive_sum += num
-> >     elif num == 0:
-> >         pass
-> >     else:
-> >         negative_sum += num
-> > print(positive_sum, negative_sum)
-> > ~~~
-> > {: .language-python}
-> >
-> > Here `pass` means "don't do anything".
-> In this particular case, it's not actually needed, since if `num == 0` neither
-> > sum needs to change, but it illustrates the use of `elif` and `pass`.
-> {: .solution}
-{: .challenge}
+Python (and most other languages in the C family) provides
+[in-place operators]({{ page.root }}/reference/#in-place-operators)
+that work like this:
 
-> ## Sorting a List Into Buckets
->
-> In our `data` folder, large data sets are stored in files whose names start with
-> "inflammation-" and small data sets -- in files whose names start with "small-". We
-> also have some other files that we do not care about at this point. We'd like to break all
-> these files into three lists called `large_files`, `small_files`, and `other_files`,
-> respectively.
->
-> Add code to the template below to do this. Note that the string method
-> [`startswith`](https://docs.python.org/3/library/stdtypes.html#str.startswith)
-> returns `True` if and only if the string it is called on starts with the string
-> passed as an argument, that is:
->
-> ~~~
-> "String".startswith("Str")
-> ~~~
-> {: .language-python}
-> ~~~
-> True
-> ~~~
-> {: .output}
-> But
-> ~~~
-> "String".startswith("str")
-> ~~~
-> {: .language-python}
-> ~~~
-> False
-> ~~~
-> {: .output}
->Use the following Python code as your starting point:
-> ~~~
-> filenames = ['inflammation-01.csv',
->          'myscript.py',
->          'inflammation-02.csv',
->          'small-01.csv',
->          'small-02.csv']
-> large_files = []
-> small_files = []
-> other_files = []
-> ~~~
-> {: .language-python}
->
-> Your solution should:
->
-> 1.  loop over the names of the files
-> 2.  figure out which group each filename belongs
-> 3.  append the filename to that list
->
-> In the end the three lists should be:
->
-> ~~~
-> large_files = ['inflammation-01.csv', 'inflammation-02.csv']
-> small_files = ['small-01.csv', 'small-02.csv']
-> other_files = ['myscript.py']
-> ~~~
-> {: .language-python}
->
-> > ## Solution
-> > ~~~
-> > for filename in filenames:
-> >     if filename.startswith('inflammation-'):
-> >         large_files.append(file)
-> >     elif filename.startswith('small-'):
-> >         small_files.append(file)
-> >     else:
-> >         other_files.append(file)
-> >
-> > print('large_files:', large_files)
-> > print('small_files:', small_files)
-> > print('other_files:', other_files)
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
+~~~
+x = 1  # original value
+x += 1 # add one to x, assigning result back to x
+x *= 3 # multiply x by 3
+print(x)
+~~~
+{: .language-python}
+
+~~~
+6
+~~~
+{: .output}
 
 > ## Counting Vowels
 >
