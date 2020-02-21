@@ -173,7 +173,7 @@ does not.
 {: .callout}
 
 There are many ways to change the contents of lists besides assigning new values to
-individual elements:
+individual elements.  Using the `append` function is one way:
 
 ~~~
 odds.append(11)
@@ -183,45 +183,6 @@ print('odds after adding a value:', odds)
 
 ~~~
 odds after adding a value: [1, 3, 5, 7, 11]
-~~~
-{: .output}
-
-While modifying in place, it is useful to remember that Python treats lists in a slightly
-counter-intuitive way.
-
-As we saw earlier, when we modified the `cookies` list item in-place, if we make a list, (attempt to) copy it and then modify this list, we can cause all sorts of trouble. This also applies to modifying the list using the above function:
-
-~~~
-odds = [1, 3, 5, 7]
-primes = odds
-primes.append(2)
-print('primes:', primes)
-print('odds:', odds)
-~~~
-{: .language-python}
-
-~~~
-primes: [1, 3, 5, 7, 2]
-odds: [1, 3, 5, 7, 2]
-~~~
-{: .output}
-
-This is because Python stores a list in memory, and then can use multiple names to refer to the
-same list. If all we want to do is copy a (simple) list, we can again use the `list` function, so we do
-not modify a list we did not mean to:
-
-~~~
-odds = [1, 3, 5, 7]
-primes = list(odds)
-primes.append(2)
-print('primes:', primes)
-print('odds:', odds)
-~~~
-{: .language-python}
-
-~~~
-primes: [1, 3, 5, 7, 2]
-odds: [1, 3, 5, 7]
 ~~~
 {: .output}
 
@@ -252,71 +213,69 @@ odds: [1, 3, 5, 7]
 > {: .solution}
 {: .challenge}
 
-Subsets of lists and strings can be accessed by specifying ranges of values in brackets.
-This is commonly referred to as "slicing" the list/string.
-
-~~~
-ingredient = 'brown eggs'
-color = ingredient[0:5]
-print("color:", color)
-
-grocery = ingredient[6:10]
-print("grocery:", grocery)
-
-cookies = ['eggs', 'flour', 'sugar', 'butter', 'chocolate chips']
-other = cookies[2:5]
-print("other:", other)
-
-last = cookies[-1]
-print('last:', last)
-~~~
-{: .language-python}
-
-~~~
-color: brown
-grocery: eggs
-other: ['sugar', 'butter', 'chocolate chips']
-last: chocolate chips
-~~~
-{: .output}
-
-If you want to take a slice from the beginning of a sequence, you can omit the first index in the
-range:
-
-~~~
-date = "Monday 4 January 2016"
-day = date[0:6]
-print("Using 0 to begin range:", day)
-day = date[:6]
-print("Omitting beginning index:", day)
-~~~
-{: .language-python}
-
-~~~
-Using 0 to begin range: Monday
-Omitting beginning index: Monday
-~~~
-{: .output}
-
-And similarly, you can omit the ending index in the range to take a slice to the very end of the
-sequence:
-
-~~~
-months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
-sond = months[8:12]
-print("With known last position:", sond)
-sond = months[8:len(months)]
-print("Using len() to get last entry:", sond)
-sond = months[8:]
-print("Omitting ending index:", sond)
-~~~
-{: .language-python}
-
-~~~
-With known last position: ["sep", "oct", "nov", "dec"]
-Using len() to get last entry: ["sep", "oct", "nov", "dec"]
-Omitting ending index: ["sep", "oct", "nov", "dec"]
-~~~
-{: .output}
+> ## Slicing
+>
+> Subsets of lists and strings can be accessed by specifying ranges of values in brackets.
+> This is commonly referred to as "slicing" the list/string.
+>
+> ~~~
+> ingredient = 'brown eggs'
+> grocery = ingredient[6:10]
+> print("grocery:", grocery)
+>
+> cookies = ['eggs', 'flour', 'sugar', 'butter', 'chocolate chips']
+> other = cookies[2:5]
+> print("other:", other)
+>
+> last = cookies[-1]
+> print('last:', last)
+> ~~~
+> {: .language-python}
+>
+> ~~~
+> grocery: eggs
+> other: ['sugar', 'butter', 'chocolate chips']
+> last: chocolate chips
+> ~~~
+> {: .output}
+>
+> If you want to take a slice from the beginning of a sequence, you can omit the first index in the
+> range:
+>
+> ~~~
+> ingredient = 'brown eggs'
+> color = date[0:5]
+> print("Using 0 to begin range:", color)
+> color = date[:5]
+> print("Omitting beginning index:", color)
+> ~~~
+> {: .language-python}
+>
+> ~~~
+> Using 0 to begin range: brown
+> Omitting beginning index: brown
+> ~~~
+> {: .output}
+>
+> And similarly, you can omit the ending index in the range to take a slice to the very end of the
+> sequence:
+>
+> ~~~
+> cookies = ['eggs', 'flour', 'sugar', 'butter', 'chocolate chips']
+> ingredients = cookies[2:5]
+> print("With known last position:", ingredients)
+> ingredients = cookies[2:len(cookies)]
+> print("Using len() to get last entry:", ingredients)
+> ingredients = cookies[2:]
+> print("Omitting ending index:", ingredients)
+> ~~~
+> {: .language-python}
+>
+> ~~~
+> With known last position: ['sugar', 'butter', 'chocolate chips']
+> Using len() to get last entry: ['sugar', 'butter', 'chocolate chips']
+> Omitting ending index: ['sugar', 'butter', 'chocolate chips']
+> ~~~
+> {: .output}
 
 {% include links.md %}
